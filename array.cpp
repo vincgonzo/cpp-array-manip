@@ -239,7 +239,7 @@ int main()
     eraseElement(v, 3);
     displayValues(v);
     */
-    displayValues(n);
+    //displayValues(n);
     displayAddress(n);
     eraseDouble(n);
 
