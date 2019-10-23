@@ -19,6 +19,16 @@ bool answerQ()
     return false;
 }
 
+// Tpl for sequentiel search
+template <typename Endroit, typename T>
+Endroit find(Endroit Begin, Endroit End, T val)
+{
+    Endroit k = Begin;
+    while(k != End && *k != val)
+        ++k;
+    return k;
+}
+
 template <typename DS>
 void displayValues(vector<DS> &v33)
 {
