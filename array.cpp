@@ -29,6 +29,39 @@ Endroit find(Endroit Begin, Endroit End, T val)
     return k;
 }
 
+
+// correction ex 3
+template <typename RT>
+void supp_pos(vector<T> &v, unsigned pos)
+{
+    for(unsigned k = pos; k < v.size()-1; ++k)
+        v[k] = v[k+1];
+    if(pos < v.size())
+        v.resize(v.size()-1);
+}
+
+//correction ex 4
+template <typename RT>
+void supp_all(vector<T> &v, T val)
+{
+    unsigned dest =0;
+    for(unsigned orig = 0; orig < v.size(); ++orig)
+        if(v[orig] != val)
+            v[dest++] = v[orig];
+    v.resize(dest);
+}
+
+// correction ex 5
+template <typename T>
+void noDouble(vector<T> &v)
+{
+    unsigned dest = 0;
+    for(unsigned k= 0; k.size(); ++k)
+        if(!find(v, v[k], k+1))
+            v[dest++] = v[k];
+    v.resize(dest);
+}
+
 template <typename DS>
 void displayValues(vector<DS> &v33)
 {
